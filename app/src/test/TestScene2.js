@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 
 import { observer, inject } from 'mobx-react/native';
+import utils from '../utils';
 
 @inject('account')
 export default class TestScene2 extends PureComponent {
@@ -26,7 +27,8 @@ export default class TestScene2 extends PureComponent {
 			<View style={styles.container}>
 				<Text style={{ marginTop: 200 }} onPress={() => {
 					this.props.account.name = 'Eddie'; 
-					goBack();
+					// goBack();
+					utils.toast('aa');
 				}}>
 					this is TestScene2
 				</Text>

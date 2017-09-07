@@ -51,36 +51,60 @@ export function getSystemVersion() {
 }
 
 export function getBundleId() {
-	return developers.getBundleId();
+	return DeviceInfo.getBundleId();
 }
 
 export function getBuildNumber() {
-	return developers.getBuildNumber();
+	return DeviceInfo.getBuildNumber();
 }
 
 export function getVersion() {
-	return developers.getVersion();
+	return DeviceInfo.getVersion();
 }
 
 export function getReadableVersion() {
-	return developers.getReadableVersion();
+	return DeviceInfo.getReadableVersion();
 }
 
 export function getDeviceName() {
-	return developers.getDeviceName();
+	return DeviceInfo.getDeviceName();
 }
 
 export function getUserAgent() {
-	return developers.getUserAgent();
+	return DeviceInfo.getUserAgent();
 }
 
 export function getDeviceLocale() {
-	return developers.getDeviceLocale();
+	return DeviceInfo.getDeviceLocale();
 }
 
-Device Country	getDeviceCountry()	US	
-Timezone	getTimezone()	America/Mexico_City	
-App Instance ID	getInstanceID()		ANDROID ONLY - see https://developers.google.com/instance-id/
-App is running in emulator	isEmulator()	true	if app is running in emulator return true
-App is running on a tablet	isTablet()	true	if app is running on a tablet return true
-PIN or fingerprint set	isPinOrFingerprintSet()(callback)		Only supported in Android and iOS 9.0 and above
+export function getDeviceCountry() {
+	return DeviceInfo.getDeviceCountry();
+}
+
+export function getTimezone() {
+	return DeviceInfo.getTimezone();
+}
+
+/**
+ * ANDROID ONLY - see https://developers.google.com/instance-id/
+ */
+export function getInstanceID() {
+	return DeviceInfo.getInstanceID();
+}
+
+export function isEmulator() {
+	return DeviceInfo.isEmulator();
+}
+
+export function isTablet() {
+	return developers.isTablet();
+}
+
+/**
+ * PIN or fingerprint set
+ * Only supported in Android and iOS 9.0 and above
+ */
+export function isPinOrFingerprintSet() {
+	return DeviceInfo.isPinOrFingerprintSet();
+}

@@ -17,7 +17,7 @@ export default class App extends PureComponent {
 
 	render() {
 		return (
-			<AppNavigation />
+			<AppNavigation ref={c => this._navigation = c} />
 		);
 	}
 }

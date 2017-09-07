@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import { observer, inject } from 'mobx-react/native';
-import utils from '../utils';
+import toast from '../utils/toast';
 
 @inject('account')
 export default class TestScene2 extends PureComponent {
@@ -22,13 +22,14 @@ export default class TestScene2 extends PureComponent {
 	}
 
 	render() {
-		const { navigate, goBack } = this.props.navigation;
+		const { navigate, goBack, state } = this.props.navigation;
 		return (
 			<View style={styles.container}>
 				<Text style={{ marginTop: 200 }} onPress={() => {
 					this.props.account.name = 'Eddie'; 
 					// goBack();
-					utils.toast('aa');
+					toast('aa');
+					console.log(state);
 				}}>
 					this is TestScene2
 				</Text>

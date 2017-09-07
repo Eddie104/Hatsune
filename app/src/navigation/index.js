@@ -41,6 +41,7 @@ export default StackNavigator({
 		screen: LogScene
 	}
 }, {
+	initialRouteName: 'test1'
 	// headerMode: 'none',
 	// transitionConfig: TransitionConfiguration
 });

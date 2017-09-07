@@ -9,6 +9,7 @@ import {
 
 import { observer, inject } from 'mobx-react/native';
 import toast from '../utils/toast';
+import Egg from 'react-native-egg';
 
 @inject('account')
 @inject('logArr')
@@ -58,6 +59,16 @@ export default class TestScene1 extends Component {
 				}}>
 					go to logScene!
 				</Text>
+				<Egg
+					setps={'TTT'}
+					onCatch={() => {
+						toast('catch!!');
+					}}
+				>
+					<Text style={{}}>
+						test egg!!
+					</Text>
+				</Egg>
 			</View>
 		);
 	}

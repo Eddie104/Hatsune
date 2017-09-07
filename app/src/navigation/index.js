@@ -8,6 +8,7 @@ import TestScene2 from '../test/TestScene2';
 import TestScene3 from '../test/TestScene3';
 
 import LogScene from '../scene/log/LogScene';
+import MainScene from '../scene/main/MainScene';
 
 // const TransitionConfiguration = (e) => ({
 // 	screenInterpolator: (sceneProps) => {
@@ -24,6 +25,9 @@ import LogScene from '../scene/log/LogScene';
 // });
 
 export default StackNavigator({
+	'main': {
+		screen: MainScene
+	},
 	'test1': {
 		screen: TestScene1
 	},

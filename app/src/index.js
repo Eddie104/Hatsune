@@ -18,6 +18,7 @@ export default class Root extends PureComponent {
 	}
 
 	render() {
+		console.log(stores);
 		return (
 			<Provider { ...stores }>
 				<App />

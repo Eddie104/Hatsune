@@ -8,14 +8,12 @@ import { NativeModules, Platform } from 'react-native';
 
 // import { isIOS, obj2Str, toast } from './utils';
 import * as net from './net';
-// import * as config from './config';
+import { UPDATE_HOST } from '../config';
 
 import FileTransfer from '@remobile/react-native-file-transfer';
 import Zip from '@remobile/react-native-zip';
 import fs from 'react-native-fs';
 import { hexMd5 } from './md5';
-
-const UPDATE_HOST = "http://192.168.56.1";
 
 let { UpdateModule } = NativeModules;
 let { documentPath, jsBundleFile } = UpdateModule;

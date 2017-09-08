@@ -21,8 +21,16 @@ RCT_EXPORT_METHOD(onEventWithLabel:(NSString *)eventID EvnetLabel:(NSString *)Ev
   [TalkingData trackEvent:eventID label:EvnetLabel];
 }
 
-RCT_EXPORT_METHOD(onRegister:(NSString *)accountID type:(NSUInteger)type accountName:(NSString *)accountName){
+RCT_EXPORT_METHOD(onEventWithLabelAndParams:(NSString *)eventID EvnetLabel:(NSString *)EvnetLabel parameters:(NSDictionary *)parameters){
+  [TalkingData trackEvent:eventID label:EvnetLabel parameters:parameters];
+}
+
+RCT_EXPORT_METHOD(onRegister:(NSUInteger)type accountID:(NSString *)accountID accountName:(NSString *)accountName){
   [TalkingData onRegister:accountID type:type name:accountName];
+}
+
+RCT_EXPORT_METHOD(onLogin:(NSUInteger)type accountID:(NSString *)accountID accountName:(NSString *)accountName){
+  [TalkingData onLogin:accountID type:type name:accountName];
 }
 
 @end

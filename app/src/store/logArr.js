@@ -2,13 +2,13 @@
 
 import { observable, action } from 'mobx';
 
-global.ERROR = Symbol('error');
+global.ERROR = 'error';
 
-global.WARN = Symbol('warn');
+global.WARN = 'warn';
 
-global.DEBUG = Symbol('debug');
+global.DEBUG = 'debug';
 
-global.INFO = Symbol('info');
+global.INFO = 'info';
 
 /**
  * log

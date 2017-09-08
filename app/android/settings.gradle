@@ -1,3 +1,21 @@
 rootProject.name = 'Tomato'
 
+include ':react-native-cordova'
+project(':react-native-cordova').projectDir = new File(settingsDir, '../node_modules/@remobile/react-native-cordova/android')
+
+include ':react-native-zip'
+project(':react-native-zip').projectDir = new File(settingsDir, '../node_modules/@remobile/react-native-zip/android')
+
+include ':react-native-toast'
+project(':react-native-toast').projectDir = new File(settingsDir, '../node_modules/@remobile/react-native-toast/android')
+
+include ':react-native-file-transfer'
+project(':react-native-file-transfer').projectDir = new File(settingsDir, '../node_modules/@remobile/react-native-file-transfer/android')
+
+include ':react-native-device-info'
+project(':react-native-device-info').projectDir = new File(settingsDir, '../node_modules/react-native-device-info/android')
+
+include ':react-native-fs'
+project(':react-native-fs').projectDir = new File(settingsDir, '../node_modules/react-native-fs/android')
+
 include ':app'

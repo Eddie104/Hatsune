@@ -1,6 +1,13 @@
 'use strict';
 
 import DeviceInfo from 'react-native-device-info';
+import {
+	Platform
+} from 'react-native';
+
+export function isIOS() {
+	return Platform.OS === "ios";
+}
 
 /**
  * Device Unique ID

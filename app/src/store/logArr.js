@@ -1,6 +1,6 @@
 'use strict';
 
-import { observable } from 'mobx';
+import { observable, action } from 'mobx';
 
 global.ERROR = Symbol('error');
 
@@ -16,7 +16,18 @@ global.INFO = Symbol('info');
 class LogArr {
 
 	// {level, log}
-	@observable logArr = [];
+	@observable arr = [];
+
+	@action
+	push(log) {
+		this.arr.push(log);
+	}
+
+	@action
+	clear() {
+		this.arr.replace([]);
+	}
+
 }
 
 export default new LogArr();

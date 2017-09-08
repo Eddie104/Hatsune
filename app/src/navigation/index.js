@@ -41,7 +41,11 @@ export default StackNavigator({
 		screen: LogScene
 	}
 }, {
-	initialRouteName: 'test1'
+	initialRouteName: 'test1',
+	mode: 'modal'
 	// headerMode: 'none',
 	// transitionConfig: TransitionConfiguration
+	// transitionConfig: () => {
+	// 	return { screenInterpolator: CardStackStyleInterpolator.forVertical }
+	// }
 });

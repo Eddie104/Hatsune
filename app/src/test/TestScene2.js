@@ -26,7 +26,7 @@ export default class TestScene2 extends PureComponent {
 		return (
 			<View style={styles.container}>
 				<Text style={{ marginTop: 200 }} onPress={() => {
-					this.props.account.name = 'Eddie'; 
+					this.props.account.setName('Eddie'); 
 					// goBack();
 					toast('aa');
 					console.log(state);

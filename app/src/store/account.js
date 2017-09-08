@@ -1,6 +1,6 @@
 'use strict';
 
-import { observable } from 'mobx';
+import { observable, action } from 'mobx';
 
 /**
  * 账号信息
@@ -8,6 +8,11 @@ import { observable } from 'mobx';
 class Account {
 
     @observable name = 'default name';
+
+    @action
+    setName(val) {
+    	this.name = val;
+    }
 }
 
 export default new Account();

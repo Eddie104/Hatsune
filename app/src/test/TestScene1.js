@@ -28,30 +28,35 @@ export default class TestScene1 extends Component {
 	render() {
 		const { navigate, goBack } = this.props.navigation;
 		const { name } = this.props.account;
-		const { logArr } = this.props.logArr;
+		const { logArr } = this.props;
 		return (
 			<View style={styles.container}>
 				<Text style={{ marginTop: 200 }} onPress={() => {
 					// this.props.account.name = '123';
 					// goBack();
-					// navigate('test2', { isModal: true });
+					navigate('test2', { isModal: true });
 					
 					logArr.push({
 						level: global.ERROR,
 						log: 'this is errorthis is errorthis is errorthis is errorthis is error'
 					});
-					logArr.push({
-						level: global.WARN,
-						log: 'this is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warn'
-					});
-					logArr.push({
-						level: global.DEBUG,
-						log: 'this is debug'
-					});
-					logArr.push({
-						level: global.INFO,
-						log: 'info'
-					});
+
+					// logArr.push({
+					// 	level: global.ERROR,
+					// 	log: 'this is errorthis is errorthis is errorthis is errorthis is error'
+					// });
+					// logArr.push({
+					// 	level: global.WARN,
+					// 	log: 'this is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warnthis is warn'
+					// });
+					// logArr.push({
+					// 	level: global.DEBUG,
+					// 	log: 'this is debug'
+					// });
+					// logArr.push({
+					// 	level: global.INFO,
+					// 	log: 'info'
+					// });
 				}}>
 					current name is { name }
 				</Text>

@@ -29,12 +29,12 @@ export default class LogScene extends PureComponent {
 
 	render() {
 		const { navigate, goBack } = this.props.navigation;
-		const { logArr } = this.props.logArr;
+		const { logArr } = this.props;
 		return (
 			<View style={styles.container}>
 				<ScrollView style={styles.container}>
 					{
-						logArr.map((log, i) => { return this.renderLog(log, i); })
+						logArr.arr.map(this.renderLog)
 					}
 				</ScrollView>
 				<FloatingAction
@@ -46,7 +46,7 @@ export default class LogScene extends PureComponent {
   					}] }
 					onPressItem={(name) => {
 						if (name === 'clear') {
-							this.props.logArr.logArr = [];
+							logArr.clear();
 						}
 					}}
 				/>

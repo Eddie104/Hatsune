@@ -33,4 +33,12 @@ RCT_EXPORT_METHOD(onLogin:(NSUInteger)type accountID:(NSString *)accountID accou
   [TalkingData onLogin:accountID type:type name:accountName];
 }
 
+RCT_EXPORT_METHOD(trackPageBegin:(NSString *)pageName){
+  [TalkingData trackPageBegin:pageName];
+}
+
+RCT_EXPORT_METHOD(trackPageEnd:(NSString *)pageName){
+  [TalkingData trackPageEnd:pageName];
+}
+
 @end

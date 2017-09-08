@@ -43,3 +43,11 @@ export function onRegister(type, accountID, accountName) {
 export function onLogin(type, accountID, accountName) {
 	TalkingDataModule.onLogin(type, accountID, accountName);
 }
+
+export function trackPageBegin(pageName) {
+	TalkingDataModule.trackPageBegin(pageName);
+}
+
+export function trackPageEnd(pageName) {
+	TalkingDataModule.trackPageEnd(pageName);
+}

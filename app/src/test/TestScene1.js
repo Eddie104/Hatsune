@@ -9,6 +9,7 @@ import {
 
 import { observer, inject } from 'mobx-react/native';
 import toast from '../utils/toast';
+import * as talkingData from '../utils/talkingData';
 import Egg from 'react-native-egg';
 
 @inject('account')
@@ -69,6 +70,12 @@ export default class TestScene1 extends Component {
 						test egg!!
 					</Text>
 				</Egg>
+				<Text style={{}} onPress={() => {
+					talkingData.onEvent('testEventID');
+					toast('ok');
+				}}>
+					talkingData event
+				</Text>
 			</View>
 		);
 	}

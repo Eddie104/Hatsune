@@ -7,7 +7,7 @@ const mongoose      = require('mongoose');
 const autoIncrement = require('./db');
 
 const userSchema = new mongoose.Schema({
-	account: {type: String, required: true},
+	account: {type: String, required: true, index: true},
 	password: {type: String, required: true},
 	// 生日
 	birthday: {type: Date, require: true},

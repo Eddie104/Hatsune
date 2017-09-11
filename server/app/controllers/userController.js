@@ -58,21 +58,21 @@ exports.register = async function (ctx) {
 	}
 };
 
-// exports.login = async function (ctx, next) {
-// 	let { account, password } = ctx.params;
-// 	account = jsonUtil.myDecodeURIComponent(account);
-// 	password = jsonUtil.myDecodeURIComponent(password);
-// 	let me = await userModel.findOne({account}, {password: 1, id: 1});
-// 	if (me) {
-// 		if (me.password === encryptionUtil.encryptionPassword(password)) {
-// 			ctx.body = jsonUtil.createAPI(1, me.id);
-// 		} else {
-// 			ctx.body = jsonUtil.createAPI(-2, `密码错误:${password}`);
-// 		}
-// 	} else {
-// 		ctx.body = jsonUtil.createAPI(-1, `没有找到账号:${account}`);
-// 	}
-// };
+exports.login = async function (ctx, next) {
+	let { account, password } = ctx.params;
+	account = jsonUtil.myDecodeURIComponent(account);
+	password = jsonUtil.myDecodeURIComponent(password);
+	let me = await userModel.findOne({account}, {password: 1, id: 1});
+	if (me) {
+		if (me.password === encryptionUtil.encryptionPassword(password)) {
+			ctx.body = jsonUtil.createAPI(1, me.id);
+		} else {
+			ctx.body = jsonUtil.createAPI(-2, `密码错误:${password}`);
+		}
+	} else {
+		ctx.body = jsonUtil.createAPI(-1, `没有找到账号:${account}`);
+	}
+};
 
 // exports.thirdPartyLogin = async function (ctx, next) {
 // 	const { account, headURL, source, app } = ctx.request.body;

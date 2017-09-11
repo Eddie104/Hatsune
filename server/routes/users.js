@@ -14,7 +14,7 @@ router.get('register/:account/:password/:phone/:source', userController.register
 
 // router.get('register/:account/:password/:source/:mail', accountController.register);
 
-// router.get('login/:account/:password', accountController.login);
+router.get('login/:account/:password', userController.login);
 
 // router.post('thirdPartyLogin', accountController.thirdPartyLogin);
 

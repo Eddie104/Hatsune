@@ -8,11 +8,7 @@ let numberUtil = require('./numberUtil');
  */
 exports.now = function (timestamp) {
 	// 因为mongo里存的时间啊是UTC +0:00的，而中国是UTC +8:00，所以这里要加8小时
-	if (timestamp) {
-		return moment(new Date(timestamp)).add(8, 'hours');
-	} else {
-		return moment(new Date()).add(8, 'hours');
-	}
+	return moment(timestamp ? new Date(timestamp) : new Date()).add(8, 'hours');
 };
 
 exports.defaultDay = function () {

@@ -10,7 +10,8 @@ const options = {
 		poolSize: 5 ,
 		auto_reconnect: true,
 		socketOptions: {keepAlive: 1}
-	}
+	},
+	useMongoClient: true
 };
 
 // if (require('os').platform() !== "win32") {

@@ -21,7 +21,7 @@ app.logger = function (name){
 };
 
 // db
-require('./app/models/db/db');
+require('./app/models/db');
 
 const index         = require('./routes/index');
 const users         = require('./routes/users');

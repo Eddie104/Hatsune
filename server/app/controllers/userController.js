@@ -1,15 +1,15 @@
 "use strict";
 
-// const userModel       = require('../models/userModel');
-const userModel      = require('../models/userModel');
+// const userModel          = require('../models/userModel');
+const userModel             = require('../models/userModel');
 // const easyUserController = require('./easy/userController');
-const jsonUtil           = require('../utils/jsonUtil');
-const dateUtil           = require('../utils/dateUtil');
-const regUtil            = require('../utils/regUtil');
-const encryptionUtil     = require('../utils/encryptionUtil');
-const numberUtil         = require('../utils/numberUtil');
-const config             = require('../../config');
-const co                 = require('co');
+const jsonUtil              = require('../utils/jsonUtil');
+const dateUtil              = require('../utils/dateUtil');
+const regUtil               = require('../utils/regUtil');
+const encryptionUtil        = require('../utils/encryptionUtil');
+const numberUtil            = require('../utils/numberUtil');
+const config                = require('../../config');
+const co                    = require('co');
 
 // co(init);
 

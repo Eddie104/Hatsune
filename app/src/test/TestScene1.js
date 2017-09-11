@@ -85,9 +85,15 @@ export default class TestScene1 extends Component {
 					talkingData event
 				</Text>
 				<Text style={{color: 'red', fontSize: 20}} onPress={() => {
-					toast('先检测是否安装了微信');
+					logArr.push({
+						level: global.INFO,
+						log: '先检测是否安装了微信'
+					});
 					WeChat.isWXAppInstalled().then(resule => {
-						toast(`检测结束 => ${resule.toString()}`);
+						logArr.push({
+							level: global.INFO,
+							log: `检测结束 => ${resule.toString()}`
+						});
 						if (resule) {
 							wx.login().then(data => {
 								// {
@@ -100,16 +106,24 @@ export default class TestScene1 extends Component {
 								//     "country":"CN",
 								//     "headimgurl":"http://wx.qlogo.cn/mmopen/ajNVdqHZLLB1tibkShzH8H1DEpuT9bbzd8D0h7QjqzVfnm8WvJxicJcSDZG97AXYPyksOSlG5C6cMRxiaVjF8NY9A/0",
 								//     "privilege":[
-
 								//     ],
 								//     "unionid":"oxTU3w3vGnrPCZ8_J280Ji9BnvIQ"
 								// }
-								toast(`微信登录成功 => ${data.nickname}`);
+								logArr.push({
+									level: global.INFO,
+									log: `微信登录成功 => ${data.nickname}`
+								});
 							}).catch(e => {
-								toast(`微信登录失败 => ${e}`);
+								logArr.push({
+									level: global.ERROR,
+									log: `微信登录失败 => ${e}`
+								});
 							});
 						} else {
-							toast('没有安装微信');
+							logArr.push({
+								level: global.INFO,
+								log: '没有安装微信'
+							});
 						}
 					});
 				}}>

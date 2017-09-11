@@ -8,6 +8,7 @@ import {
 import AppNavigation from './navigation';
 import { NavigationActions } from 'react-navigation';
 import toast from './utils/toast';
+import * as wx from './utils/wx';
 import * as deviceInfo from './utils/deviceInfo';
 
 export default class App extends PureComponent {

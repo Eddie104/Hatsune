@@ -11,6 +11,7 @@ import { observer, inject } from 'mobx-react/native';
 import toast from '../utils/toast';
 import * as talkingData from '../utils/talkingData';
 import Egg from 'react-native-egg';
+import * as WeChat from 'react-native-wechat';
 
 @inject('account')
 @inject('logArr')
@@ -81,6 +82,13 @@ export default class TestScene1 extends Component {
 					toast('ok');
 				}}>
 					talkingData event
+				</Text>
+				<Text style={{}} onPress={() => {
+					WeChat.isWXAppInstalled().then(resule => {
+						toast(resule.toString());
+					});
+				}}>
+					weChat
 				</Text>
 			</View>
 		);

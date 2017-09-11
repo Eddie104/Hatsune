@@ -10,6 +10,7 @@ import {
 import { observer, inject } from 'mobx-react/native';
 import toast from '../utils/toast';
 import * as talkingData from '../utils/talkingData';
+import * as wx from '../utils/wx';
 import Egg from 'react-native-egg';
 import * as WeChat from 'react-native-wechat';
 
@@ -83,12 +84,36 @@ export default class TestScene1 extends Component {
 				}}>
 					talkingData event
 				</Text>
-				<Text style={{}} onPress={() => {
+				<Text style={{color: 'red', fontSize: 20}} onPress={() => {
+					toast('先检测是否安装了微信');
 					WeChat.isWXAppInstalled().then(resule => {
-						toast(resule.toString());
+						toast(`检测结束 => ${resule.toString()}`);
+						if (resule) {
+							wx.login().then(data => {
+								// {
+								//     "openid":"odWvgs1H2aZmdCNKcjzEfpCWOkok",
+								//     "nickname":"鸿杰",
+								//     "sex":1,
+								//     "language":"zh_CN",
+								//     "city":"Baoshan",
+								//     "province":"Shanghai",
+								//     "country":"CN",
+								//     "headimgurl":"http://wx.qlogo.cn/mmopen/ajNVdqHZLLB1tibkShzH8H1DEpuT9bbzd8D0h7QjqzVfnm8WvJxicJcSDZG97AXYPyksOSlG5C6cMRxiaVjF8NY9A/0",
+								//     "privilege":[
+
+								//     ],
+								//     "unionid":"oxTU3w3vGnrPCZ8_J280Ji9BnvIQ"
+								// }
+								toast(`微信登录成功 => ${data.nickname}`);
+							}).catch(e => {
+								toast(`微信登录失败 => ${e}`);
+							});
+						} else {
+							toast('没有安装微信');
+						}
 					});
 				}}>
-					weChat
+					weChat login
 				</Text>
 			</View>
 		);

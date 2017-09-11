@@ -9,6 +9,7 @@ import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
+import com.theweflex.react.WeChatPackage;
 import com.remobile.filetransfer.RCTFileTransferPackage;
 import com.remobile.toast.RCTToastPackage;
 import com.remobile.zip.RCTZipPackage;
@@ -29,11 +30,13 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+          new MyPackage(),
           new RCTZipPackage(),
           new RCTToastPackage(),
           new RCTFileTransferPackage(),
           new RNDeviceInfo(),
-          new RNFSPackage()
+          new RNFSPackage(),
+          new WeChatPackage()
       );
     }
   };

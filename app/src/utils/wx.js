@@ -1,8 +1,7 @@
 'use strict';
 
 import * as WeChat from 'react-native-wechat';
-import toast from './toast';
-import * as dimensions from './dimensions';
+import * as net from './net';
 
 WeChat.registerApp('wxfa94edb3518b3a6f');
 

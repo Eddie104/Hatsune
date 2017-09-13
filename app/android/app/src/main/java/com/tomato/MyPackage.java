@@ -21,6 +21,7 @@ public class MyPackage implements ReactPackage {
 
         List<NativeModule> modules=new ArrayList<>();
         modules.add(new UpdateModule(reactContext));
+        modules.add(new TalkingDataModule(reactContext));
         return modules;
     }
 

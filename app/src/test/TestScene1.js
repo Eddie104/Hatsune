@@ -78,8 +78,8 @@ export default class TestScene1 extends Component {
 					</Text>
 				</Egg>
 				<Text style={{}} onPress={() => {
-					// talkingData.onEvent('testEventID');
-					talkingData.onLogin(talkingData.ACCOUNT_TYPE.QQ, '36', '32968210');
+					talkingData.onEventWithLabel('testLabelAndParams', 'testLabel');
+					// talkingData.onLogin(talkingData.ACCOUNT_TYPE.QQ, '36', '32968210');
 					toast('ok');
 				}}>
 					talkingData event

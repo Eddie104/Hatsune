@@ -8,8 +8,10 @@ import {
 import AppNavigation from './navigation';
 import { NavigationActions } from 'react-navigation';
 import toast from './utils/toast';
+import * as jpush from './utils/jpush';
 import * as wx from './utils/wx';
 import * as deviceInfo from './utils/deviceInfo';
+import logArr from './store/logArr';
 
 export default class App extends PureComponent {
 	
@@ -18,6 +20,25 @@ export default class App extends PureComponent {
 
 		// 上一次按下android返回键的时间
 		this._lastPressBackTime = 0;
+
+		jpush.setReceiveCustomMsgCallback(message => {
+			logArr.push({
+				level: global.INFO,
+				log: `jpush message => ${JSON.stringify(message)}`
+			});
+		});
+
+		jpush.setReceiveNotificationCallback(message => {
+			logArr.push({
+				level: global.INFO,
+				log: `jpush notification => ${JSON.stringify(message)}`
+			});
+		});
+
+		logArr.push({
+			level: global.INFO,
+			log: 'just a test!!'
+		});
 	}
 
 	componentDidMount() {

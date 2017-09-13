@@ -1,6 +1,6 @@
 'use strict';
 
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import {
 	StyleSheet,
 	View,
@@ -17,7 +17,7 @@ import { FloatingAction } from 'react-native-floating-action';
 
 @inject('logArr')
 @observer
-export default class LogScene extends PureComponent {
+export default class LogScene extends Component {
 	
 	static navigationOptions = ({ navigation, screenProps }) => ({
 		title: `log scene`,

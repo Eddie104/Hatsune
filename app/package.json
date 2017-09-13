@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "configureJPush": "node node_modules/jpush-react-native/JPushConfiguration.js",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest"
   },
@@ -11,6 +12,8 @@
     "@remobile/react-native-file-transfer": "^1.0.7",
     "@remobile/react-native-toast": "^1.0.6",
     "@remobile/react-native-zip": "^1.0.4",
+    "jcore-react-native": "^1.1.8-beta2",
+    "jpush-react-native": "^2.0.6",
     "mobx": "^3.2.2",
     "mobx-react": "^4.2.2",
     "react": "16.0.0-alpha.12",

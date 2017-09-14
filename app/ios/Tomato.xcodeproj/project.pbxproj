@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -26,8 +27,6 @@
 		2C3A36631F613A7500867D91 /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3A36601F613A4600867D91 /* libRNFS.a */; };
 		2C3A366A1F613C3300867D91 /* libRCTZip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3A36691F613C0000867D91 /* libRCTZip.a */; };
 		2C3A36711F613CFD00867D91 /* libRCTFileTransfer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3A36701F613CD500867D91 /* libRCTFileTransfer.a */; };
-		2CB8D88F1F666BE500101D91 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB8D88E1F666BE500101D91 /* libsqlite3.0.tbd */; };
-		2CB8D8F81F66729A00101D91 /* libRCTWeChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB8D8F51F66724500101D91 /* libRCTWeChat.a */; };
 		2CF0966D1F61427E009955C6 /* libRCTCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C502CAC1F61414100985FC4 /* libRCTCordova.a */; };
 		2CF096991F61434E009955C6 /* BSDiff.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF096941F61434E009955C6 /* BSDiff.m */; };
 		2CF0969A1F61434E009955C6 /* bspatch.c in Sources */ = {isa = PBXBuildFile; fileRef = 2CF096951F61434E009955C6 /* bspatch.c */; };
@@ -57,7 +56,6 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		4C8104F938BD4BBCB47F1BBD /* libRCTJCoreModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8DDF03FA954693B3CA2C1A /* libRCTJCoreModule.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,20 +205,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 32285F831BFC05EC00AD8363;
 			remoteInfo = RCTCordova;
-		};
-		2CB8D8F41F66724500101D91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CB8D8EE1F66724500101D91 /* RCTWeChat.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 86D238421BD0BB9E00C75D01;
-			remoteInfo = RCTWeChat;
-		};
-		2CB8D8F61F66724500101D91 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2CB8D8EE1F66724500101D91 /* RCTWeChat.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 10D6D7A41F160C250066F0F3;
-			remoteInfo = RCTWeChatTests;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -383,8 +367,6 @@
 		2C3A36641F613C0000867D91 /* RCTZip.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTZip.xcodeproj; path = "../node_modules/@remobile/react-native-zip/ios/RCTZip.xcodeproj"; sourceTree = "<group>"; };
 		2C3A366B1F613CD500867D91 /* RCTFileTransfer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTFileTransfer.xcodeproj; path = "../node_modules/@remobile/react-native-file-transfer/ios/RCTFileTransfer.xcodeproj"; sourceTree = "<group>"; };
 		2C502CA21F61414100985FC4 /* RCTCordova.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCordova.xcodeproj; path = "../node_modules/@remobile/react-native-cordova/ios/RCTCordova.xcodeproj"; sourceTree = "<group>"; };
-		2CB8D88E1F666BE500101D91 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		2CB8D8EE1F66724500101D91 /* RCTWeChat.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWeChat.xcodeproj; path = "../node_modules/react-native-wechat/ios/RCTWeChat.xcodeproj"; sourceTree = "<group>"; };
 		2CF096931F61434E009955C6 /* BSDiff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSDiff.h; sourceTree = "<group>"; };
 		2CF096941F61434E009955C6 /* BSDiff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSDiff.m; sourceTree = "<group>"; };
 		2CF096951F61434E009955C6 /* bspatch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bspatch.c; sourceTree = "<group>"; };
@@ -410,8 +392,6 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		D1FA199F566D4E5AAB9BC481 /* RCTJCoreModule.xcodeproj */ = {isa = PBXFileReference; name = "RCTJCoreModule.xcodeproj"; path = "../node_modules/jcore-react-native/ios/RCTJCoreModule.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		8F8DDF03FA954693B3CA2C1A /* libRCTJCoreModule.a */ = {isa = PBXFileReference; name = "libRCTJCoreModule.a"; path = "libRCTJCoreModule.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,8 +407,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB8D8F81F66729A00101D91 /* libRCTWeChat.a in Frameworks */,
-				2CB8D88F1F666BE500101D91 /* libsqlite3.0.tbd in Frameworks */,
 				2CF096E61F614F0A009955C6 /* SystemConfiguration.framework in Frameworks */,
 				2CF096E41F614F01009955C6 /* Security.framework in Frameworks */,
 				2CF096E21F614EF4009955C6 /* CoreMotion.framework in Frameworks */,
@@ -457,7 +435,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				4C8104F938BD4BBCB47F1BBD /* libRCTJCoreModule.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,19 +641,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2CB8D8EF1F66724500101D91 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2CB8D8F51F66724500101D91 /* libRCTWeChat.a */,
-				2CB8D8F71F66724500101D91 /* RCTWeChatTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		2CF096B31F61441A009955C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2CB8D88E1F666BE500101D91 /* libsqlite3.0.tbd */,
 				2CF096E51F614F0A009955C6 /* SystemConfiguration.framework */,
 				2CF096E31F614F01009955C6 /* Security.framework */,
 				2CF096E11F614EF4009955C6 /* CoreMotion.framework */,
@@ -710,7 +677,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				2CB8D8EE1F66724500101D91 /* RCTWeChat.xcodeproj */,
 				2C502CA21F61414100985FC4 /* RCTCordova.xcodeproj */,
 				2C3A366B1F613CD500867D91 /* RCTFileTransfer.xcodeproj */,
 				2C3A36641F613C0000867D91 /* RCTZip.xcodeproj */,
@@ -729,7 +695,6 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				D1FA199F566D4E5AAB9BC481 /* RCTJCoreModule.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -858,7 +823,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 610;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -943,10 +908,6 @@
 				{
 					ProductGroup = 139FDEE71B06529A00C62182 /* Products */;
 					ProjectRef = 139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */;
-				},
-				{
-					ProductGroup = 2CB8D8EF1F66724500101D91 /* Products */;
-					ProjectRef = 2CB8D8EE1F66724500101D91 /* RCTWeChat.xcodeproj */;
 				},
 				{
 					ProductGroup = 2C3A36651F613C0000867D91 /* Products */;
@@ -1114,20 +1075,6 @@
 			fileType = archive.ar;
 			path = libRCTCordova.a;
 			remoteRef = 2C502CAB1F61414100985FC4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2CB8D8F51F66724500101D91 /* libRCTWeChat.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRCTWeChat.a;
-			remoteRef = 2CB8D8F41F66724500101D91 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2CB8D8F71F66724500101D91 /* RCTWeChatTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RCTWeChatTests.xctest;
-			remoteRef = 2CB8D8F61F66724500101D91 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		3DAD3E841DF850E9000B6D8A /* libRCTImage-tvOS.a */ = {
@@ -1407,14 +1354,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomato.app/Tomato";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
-				);
 			};
 			name = Debug;
 		};
@@ -1432,14 +1371,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomato.app/Tomato";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
-				);
 			};
 			name = Release;
 		};
@@ -1449,7 +1380,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/@remobile/react-native-cordova/ios/RCTCordova""$(SRCROOT)/../node_modules/jcore-react-native/ios/RCTJCoreModule";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/@remobile/react-native-cordova/ios/RCTCordova";
 				INFOPLIST_FILE = Tomato/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1471,7 +1402,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/@remobile/react-native-cordova/ios/RCTCordova""$(SRCROOT)/../node_modules/jcore-react-native/ios/RCTJCoreModule";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../node_modules/@remobile/react-native-cordova/ios/RCTCordova";
 				INFOPLIST_FILE = Tomato/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -1511,14 +1442,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
-				);
 			};
 			name = Debug;
 		};
@@ -1545,14 +1468,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/jcore-react-native/ios/RCTJCoreModule",
-				);
 			};
 			name = Release;
 		};
@@ -1574,10 +1489,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomato-tvOS.app/Tomato-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
 			};
 			name = Debug;
 		};
@@ -1599,10 +1510,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tomato-tvOS.app/Tomato-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
 			};
 			name = Release;
 		};

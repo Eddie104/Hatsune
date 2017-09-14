@@ -10,9 +10,10 @@ import {
 import { observer, inject } from 'mobx-react/native';
 import toast from '../utils/toast';
 import * as talkingData from '../utils/talkingData';
-import * as wx from '../utils/wx';
+// import * as wx from '../utils/wx';
 import Egg from 'react-native-egg';
-import * as WeChat from 'react-native-wechat';
+// import * as WeChat from 'react-native-wechat';
+import List from '../components/List';
 
 @inject('account')
 @inject('logArr')
@@ -89,46 +90,47 @@ export default class TestScene1 extends Component {
 						level: global.INFO,
 						log: '先检测是否安装了微信'
 					});
-					WeChat.isWXAppInstalled().then(resule => {
-						logArr.push({
-							level: global.INFO,
-							log: `检测结束 => ${resule.toString()}`
-						});
-						if (resule) {
-							wx.login().then(data => {
-								// {
-								//     "openid":"odWvgs1H2aZmdCNKcjzEfpCWOkok",
-								//     "nickname":"鸿杰",
-								//     "sex":1,
-								//     "language":"zh_CN",
-								//     "city":"Baoshan",
-								//     "province":"Shanghai",
-								//     "country":"CN",
-								//     "headimgurl":"http://wx.qlogo.cn/mmopen/ajNVdqHZLLB1tibkShzH8H1DEpuT9bbzd8D0h7QjqzVfnm8WvJxicJcSDZG97AXYPyksOSlG5C6cMRxiaVjF8NY9A/0",
-								//     "privilege":[
-								//     ],
-								//     "unionid":"oxTU3w3vGnrPCZ8_J280Ji9BnvIQ"
-								// }
-								logArr.push({
-									level: global.INFO,
-									log: `微信登录成功 => ${data.nickname}`
-								});
-							}).catch(e => {
-								logArr.push({
-									level: global.ERROR,
-									log: `微信登录失败 => ${e}`
-								});
-							});
-						} else {
-							logArr.push({
-								level: global.INFO,
-								log: '没有安装微信'
-							});
-						}
-					});
+					// WeChat.isWXAppInstalled().then(resule => {
+					// 	logArr.push({
+					// 		level: global.INFO,
+					// 		log: `检测结束 => ${resule.toString()}`
+					// 	});
+					// 	if (resule) {
+					// 		wx.login().then(data => {
+					// 			// {
+					// 			//     "openid":"odWvgs1H2aZmdCNKcjzEfpCWOkok",
+					// 			//     "nickname":"鸿杰",
+					// 			//     "sex":1,
+					// 			//     "language":"zh_CN",
+					// 			//     "city":"Baoshan",
+					// 			//     "province":"Shanghai",
+					// 			//     "country":"CN",
+					// 			//     "headimgurl":"http://wx.qlogo.cn/mmopen/ajNVdqHZLLB1tibkShzH8H1DEpuT9bbzd8D0h7QjqzVfnm8WvJxicJcSDZG97AXYPyksOSlG5C6cMRxiaVjF8NY9A/0",
+					// 			//     "privilege":[
+					// 			//     ],
+					// 			//     "unionid":"oxTU3w3vGnrPCZ8_J280Ji9BnvIQ"
+					// 			// }
+					// 			logArr.push({
+					// 				level: global.INFO,
+					// 				log: `微信登录成功 => ${data.nickname}`
+					// 			});
+					// 		}).catch(e => {
+					// 			logArr.push({
+					// 				level: global.ERROR,
+					// 				log: `微信登录失败 => ${e}`
+					// 			});
+					// 		});
+					// 	} else {
+					// 		logArr.push({
+					// 			level: global.INFO,
+					// 			log: '没有安装微信'
+					// 		});
+					// 	}
+					// });
 				}}>
 					weChat login
 				</Text>
+				<List />
 			</View>
 		);
 	}

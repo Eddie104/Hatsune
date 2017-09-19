@@ -14,6 +14,7 @@ import * as talkingData from '../utils/talkingData';
 import Egg from 'react-native-egg';
 // import * as WeChat from 'react-native-wechat';
 import List from '../components/List';
+import LrcLabel from '../components/LrcLabel';
 
 @inject('account')
 @inject('logArr')
@@ -34,7 +35,7 @@ export default class TestScene1 extends Component {
 		const { logArr } = this.props;
 		return (
 			<View style={styles.container}>
-				<Text style={{ marginTop: 200 }} onPress={() => {
+				<Text style={{ }} onPress={() => {
 					// this.props.account.name = '123';
 					// goBack();
 					navigate('test2', { isModal: true });
@@ -130,7 +131,13 @@ export default class TestScene1 extends Component {
 				}}>
 					weChat login
 				</Text>
-				<List />
+				{
+					// <List />
+				}
+				{
+					// 测试lrc组件
+					<LrcLabel />
+				}
 			</View>
 		);
 	}
@@ -138,6 +145,7 @@ export default class TestScene1 extends Component {
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1
+		flex: 1,
+		backgroundColor: 'white',
 	}
 });

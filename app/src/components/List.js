@@ -94,10 +94,10 @@ export default class List extends PureComponent {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: 'white',
+		backgroundColor: 'white'
 	},
 	item: {
 		height: 40,
-		alignSelf: 'center',
+		alignSelf: 'center'
 	}
 });

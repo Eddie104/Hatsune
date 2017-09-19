@@ -40,10 +40,15 @@ export default class LrcLabel extends PureComponent {
 	}
 
 	render() {
+		const { maskHeight } = this.state;
 		return (
-			<View style={ styles.container }>
-				{ this.createLabel() }
-				{ this.createMaskLabel() }
+			<View style={ [styles.container, { height: maskHeight }] }>
+				{ 
+					this.createLabel() 
+				}
+				{ 
+					this.createMaskLabel()
+				}
 			</View>
 		);
 	}
@@ -97,7 +102,7 @@ export default class LrcLabel extends PureComponent {
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: 'white',
+		backgroundColor: 'white'
 	},
 	text: {
 		backgroundColor: 'transparent',

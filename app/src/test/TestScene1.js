@@ -138,6 +138,16 @@ export default class TestScene1 extends Component {
 					// 测试lrc组件
 					<LrcLabel />
 				}
+				<Text style={{ }} onPress={() => {
+					navigate('logScene', { isModal: true });
+				}}>
+					跳转场景 modal模式
+				</Text>
+				<Text style={{ }} onPress={() => {
+					navigate('logScene');
+				}}>
+					跳转场景 默认模式
+				</Text>
 			</View>
 		);
 	}
